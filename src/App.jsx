@@ -1,34 +1,87 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState("blue")
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="w-full h-screen duration-100" style={{ backgroundColor: color }}>
+      <header>
+      <div class="relative w-full bg-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+          <div class="inline-flex items-center space-x-2">
+
+            <span class="font-bold">Background Changer</span>
+          </div>
+          <div class="hidden lg:block">
+            <ul class="inline-flex space-x-8">
+              <li>
+                <a
+                  href="#"
+                  class="text-sm font-semibold text-gray-800 hover:text-gray-900"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/AmanKumarAndro"
+                  class="text-sm font-semibold text-gray-800 hover:text-gray-900"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/aman-kumar-671a19244/"
+                  class="text-sm font-semibold text-gray-800 hover:text-gray-900"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden lg:block">
+
+          </div>
+          <div class="lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-6 w-6 cursor-pointer"
+            >
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      </header>
+      
+
+      <div className='fixed flex flex-wrap bottom-8 justify-center px-2 inset-x-2'>
+        <div className=' flex flex-wrap bg-white rounded-xl py-2 px-2 shadow-l justify-center gap-3' >
+          <button onClick={() => setColor('red')} className={`h-6 w-6 rounded-full shadow-2xl bg-red-500`}></button>
+          <button onClick={() => setColor('blue')} className={`h-6 w-6 rounded-full bg-blue-500`}></button>
+          <button onClick={() => setColor('lightgreen')} className={`h-6 w-6 rounded-full bg-green-300`}></button>
+          <button onClick={() => setColor('yellow')} className={`h-6 w-6 rounded-full bg-yellow-500`}></button>
+          <button onClick={() => setColor('orange')} className={`h-6 w-6 rounded-full bg-orange-500`}></button>
+          <button onClick={() => setColor('gray')} className={`h-6 w-6 rounded-full bg-gray-500`}></button>
+          <button onClick={() => setColor('cyan')} className={`h-6 w-6 rounded-full bg-cyan-500`}></button>
+          <button onClick={() => setColor('black')} className={`h-6 w-6 rounded-full bg-black`}></button>
+
+        </div>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
